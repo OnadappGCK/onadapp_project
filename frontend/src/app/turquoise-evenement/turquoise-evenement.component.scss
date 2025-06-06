@@ -1,0 +1,26 @@
+@import "/src/scss/palette";
+
+.evenement-container {
+  display: flex;
+  height: 80vh;
+}
+
+.evenement-wrapper {
+  position: relative;
+  overflow: hidden; /* Empêche le scroll si besoin */
+}
+
+.calendar-wrapper {
+  flex: 1;
+  padding: 1rem;
+  overflow: auto;
+}
+
+app-event-detail-panel {
+  height: calc(100% - 108px);
+  top: 108px;
+  background-color: $dark-blue-light;
+  position: fixed;
+  right: 0px;
+  z-index: 4;
+}

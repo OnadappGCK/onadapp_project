@@ -1,0 +1,28 @@
+<div class="question-container">
+  <div class="question-label">
+    <h2>{{ question.label }}</h2>
+  </div>
+  <div class="question-buttons">
+    <div
+      class="question-button"
+      [ngClass]="{ 'question-selected': selectedAnswer == question.answers[0] }"
+      [style.--gradient-color-left]="gradientColorLeft"
+      (mouseup)="selectAnswer(question.answers[0])"
+      (touchend)="selectAnswer(question.answers[0])"
+    >
+      <h2>{{ question.answers[0].label }}</h2>
+      <div class="button-img"><fa-icon [icon]="faCheckCircle"></fa-icon></div>
+    </div>
+    <div class="vertical-bar"></div>
+    <div
+      class="question-button"
+      [ngClass]="{ 'question-selected': selectedAnswer == question.answers[1] }"
+      [style.--gradient-color-right]="gradientColorRight"
+      (mouseup)="selectAnswer(question.answers[1])"
+      (touchend)="selectAnswer(question.answers[1])"
+    >
+      <h2>{{ question.answers[1].label }}</h2>
+      <div class="button-img"><fa-icon [icon]="faXmarkCircle"></fa-icon></div>
+    </div>
+  </div>
+</div>

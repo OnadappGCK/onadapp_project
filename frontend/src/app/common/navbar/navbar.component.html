@@ -1,0 +1,40 @@
+<div class="navbar flex_row">
+  <div class="navbar_logo">
+    <img class="navbar_logo_img" src="/assets/img/logos/onadappTRS.png" />
+  </div>
+  <div
+    *ngIf="windowWidth > 1000"
+    class="navbar_button_list flex_row flex-center"
+  >
+    <div
+      *ngFor="let page of pages"
+      class="navbar_button flex-center"
+      (click)="navigate(page.path)"
+    >
+      <div class="navbar_button_label">{{ page.name }}</div>
+    </div>
+  </div>
+  <div class="flex-center">
+    <button *ngIf="!user" routerLink="/auth/login">Connexion</button>
+    <span class="user-span" *ngIf="user">
+      Bonjour {{ user?.pseudo }}
+      <button (click)="logout()">Déconnexion</button>
+    </span>
+  </div>
+  <div class="navbar_burger_menu flex-center" (click)="openCloseSideMenu()">
+    <burger-menu></burger-menu>
+  </div>
+</div>
+<div
+  @sideMenuOpenClose
+  *ngIf="sideMenuOpen"
+  class="navbar_side_menu flex_column"
+>
+  <div
+    *ngFor="let page of pages"
+    class="navbar_button_sm flex-center"
+    (click)="navigate(page.path)"
+  >
+    <div class="navbar_button_label">{{ page.name }}</div>
+  </div>
+</div>

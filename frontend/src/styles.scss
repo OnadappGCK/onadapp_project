@@ -1,0 +1,112 @@
+@import "./scss/palette";
+
+body {
+  margin: 0px;
+  background-color: $dark-blue;
+  width: 100%;
+}
+
+.page-top {
+  width: 100%;
+  height: 120px;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-20-80 {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+div {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #575757;
+}
+
+h1 {
+  color: $white;
+  font-weight: 800;
+  margin: 0px;
+}
+
+h2 {
+  color: $grey-blue-light;
+  font-weight: 600;
+  margin: 0px;
+}
+
+h3 {
+  color: $grey-blue-light;
+  font-weight: 600;
+  margin: 0px;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+/* For Tablets and pc*/
+@media screen and (min-width: 540px) {
+  h1 {
+    color: $white;
+    font-size: 3vw;
+    font-weight: 800;
+    margin: 0px;
+  }
+
+  h2 {
+    color: $grey-blue-light;
+    font-size: 2vw;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  h3 {
+    color: $grey-blue-light;
+    font-size: 1vw;
+    font-weight: 600;
+    margin: 0px;
+  }
+}
+/* For Mobile */
+@media screen and (max-width: 540px) {
+  h1 {
+    color: $white;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0px;
+  }
+
+  h2 {
+    color: $grey-blue-light;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  h3 {
+    color: $grey-blue-light;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0px;
+  }
+}

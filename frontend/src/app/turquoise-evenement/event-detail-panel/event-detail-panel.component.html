@@ -1,0 +1,10 @@
+<div class="detail-panel">
+  <button class="close-button" (click)="closePanel.emit()">Fermer</button>
+  <div *ngFor="let event of events" class="event-info">
+    <h3>{{ event.title }}</h3>
+    <p><strong>Heure de départ :</strong> {{ event.timeStart }}</p>
+    <p><strong>Heure de fin :</strong> {{ event.timeEnd }}</p>
+    <p><strong>Lieu :</strong> {{ event.place }} - {{ event.city }}</p>
+    <p><strong>Description :</strong> {{ event.description }}</p>
+  </div>
+</div>

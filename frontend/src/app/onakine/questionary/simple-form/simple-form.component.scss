@@ -1,0 +1,34 @@
+@import "/src/scss/palette";
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-label {
+}
+
+.question-buttons {
+}
+
+.question-selected {
+  background-color: $grey-blue;
+}
+
+.question-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 20vw;
+  color: $grey-blue-light;
+  border: 2px solid $grey-blue-light;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.question-button:hover {
+  background-color: $grey-blue-lightS;
+}

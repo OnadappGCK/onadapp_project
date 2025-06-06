@@ -1,0 +1,147 @@
+@import "/src/scss/palette";
+
+.navbar {
+  width: 100%;
+  height: 100px;
+  margin: 8px 0 0 8px;
+  justify-content: space-between;
+  background-color: $dark-blue-light;
+  z-index: 20;
+  position: fixed;
+}
+
+.navbar_logo {
+  height: 100%;
+  margin-left: 10px;
+}
+.navbar_logo_img {
+  height: 100%;
+}
+
+.navbar_button_list {
+  padding-right: 25px;
+}
+
+button {
+  height: 40px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $white-blue-light;
+  border-radius: 10%;
+  background-color: $dark-blue;
+  color: $white-blue-light;
+  min-width: 80px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: $dark-blue-light;
+}
+
+.user-span {
+  background-color: $white-blue-light;
+  padding: 5px 10px;
+}
+
+.navbar_button {
+  height: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $white-blue-light;
+  border-radius: 10%;
+  margin: 5px;
+  color: $white-blue-light;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.navbar_button_label {
+  color: $white-blue-light;
+}
+
+.navbar_button:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: $white-blue-light;
+  animation-name: bounceY;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  background-color: #a6aebe;
+}
+
+.navbar_button_sm {
+  height: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $white-blue-light;
+  margin: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $white-blue-light;
+  width: 100px;
+  cursor: pointer;
+}
+
+.navbar_button_sm:hover {
+  animation-name: bounceX;
+  animation-timing-function: ease;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  background-color: #a6aebe;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(110%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes bounceY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navbar_button_label {
+}
+
+.navbar_burger_menu {
+  padding-right: 25px;
+}
+
+.navbar_side_menu {
+  height: calc(100% - 108px);
+  top: 108px;
+  background-color: $dark-blue-light;
+  position: fixed;
+  right: 0px;
+  z-index: 10;
+}
+
+:host {
+  top: 0px;
+}

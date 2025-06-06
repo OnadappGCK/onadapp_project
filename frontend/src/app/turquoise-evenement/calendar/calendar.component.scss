@@ -1,0 +1,55 @@
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: 60px repeat(7, 1fr);
+  background: #2d2f36;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  height: 100%;
+  overflow: auto;
+}
+
+.time-column {
+  background: #26272c;
+  color: #aaa;
+}
+
+.hour-label {
+  height: 60px;
+  font-size: 0.7rem;
+  padding-left: 4px;
+  line-height: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  position: relative;
+}
+
+.calendar-day {
+  position: relative;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hour-line {
+  height: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}

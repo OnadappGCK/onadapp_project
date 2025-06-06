@@ -1,0 +1,75 @@
+@import "/src/scss/palette";
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour le conteneur des boutons */
+.question-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+  width: 80%; /* Ajustez cette valeur selon votre besoin */
+}
+
+.question-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+  padding: 15px;
+  color: $grey-blue-light;
+  cursor: pointer;
+}
+
+/* Séparateur vertical */
+.vertical-bar {
+  width: 2px;
+  background-color: white;
+  height: 200px;
+}
+
+/* Définition des variables CSS au niveau du :root ou dans un scope spécifique */
+:root {
+  --gradient-color-left: green; /* Couleur par défaut pour le côté gauche */
+  --gradient-color-right: red; /* Couleur par défaut pour le côté droit */
+}
+
+.question-button:first-child:hover {
+  background: linear-gradient(to left, var(--gradient-color-left), transparent);
+}
+
+.question-button:last-child:hover {
+  background: linear-gradient(
+    to right,
+    var(--gradient-color-right),
+    transparent
+  );
+}
+
+/* Styles pour les titres et les images dans les boutons */
+.question-button h2 {
+  margin: 0 0 10px; /* Ajustez les marges selon votre besoin */
+}
+
+.question-button div {
+  width: 100px; /* Ajustez la largeur selon votre besoin */
+  height: 100px; /* Ajustez la hauteur selon votre besoin */
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour l'image à l'intérieur du div, si nécessaire */
+.button-img {
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 70px;
+}

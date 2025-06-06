@@ -1,0 +1,30 @@
+<div class="questionary-container">
+  <div class="questionary-main-container">
+    <div *ngIf="!showResult">
+      <app-no-connexion *ngIf="currentQuestion.answers.length == 0">
+      </app-no-connexion>
+      <app-dual-form
+        *ngIf="
+          currentQuestion.answers.length <= 2 &&
+          currentQuestion.answers.length != 0
+        "
+        [question]="currentQuestion"
+      ></app-dual-form>
+      <app-simple-form
+        *ngIf="currentQuestion.answers.length > 2 && currentQuestion.id != 13"
+        [question]="currentQuestion"
+      ></app-simple-form>
+      <app-body-form
+        *ngIf="currentQuestion.id == 13"
+        [question]="currentQuestion"
+      ></app-body-form>
+    </div>
+    <div *ngIf="showResult">
+      <app-answer [result]="currentResult"></app-answer>
+    </div>
+  </div>
+
+  <div class="questionary-footer-container">
+    <div class="questionary-footer">1/1</div>
+  </div>
+</div>

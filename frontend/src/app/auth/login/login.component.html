@@ -1,0 +1,29 @@
+<div class="page-top"></div>
+<div class="page-content">
+  <div class="login-container">
+    <form class="form-container" [formGroup]="form" (ngSubmit)="submit()">
+      <h2>Connexion</h2>
+      <input
+        formControlName="email"
+        class="input-form"
+        type="email"
+        placeholder="Email"
+      />
+      <input
+        formControlName="password"
+        class="input-form"
+        type="password"
+        placeholder="Mot de passe"
+      />
+      <button type="submit" class="button-form">Connexion</button>
+      <div *ngIf="errorMessage" class="alert-connexion">
+        {{ errorMessage }}
+      </div>
+    </form>
+
+    <p class="connexion-container">
+      Pas encore inscrit ?
+      <a class="margin-5" routerLink="/auth/register">Créer un compte</a>
+    </p>
+  </div>
+</div>

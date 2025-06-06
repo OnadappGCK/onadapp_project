@@ -1,0 +1,38 @@
+@import "/src/scss/palette";
+
+.footer-container {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: $dark-blue-light;
+  color: white;
+}
+
+.footer-left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 20%;
+  color: white;
+}
+
+.footer-middle-part {
+  width: 20%;
+}
+
+.footer-right-part {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  width: 20%;
+  color: white;
+}
+
+.footer-right-part-icon {
+  width: 30px; //correction sur le html: TODO : homogeniser les logos
+  place-self: center;
+}
+
+.subtitle {
+  color: $grey-blue;
+}

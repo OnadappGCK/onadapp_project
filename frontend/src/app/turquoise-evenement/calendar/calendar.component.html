@@ -1,0 +1,31 @@
+<div class="calendar-wrapper" #calendarWrapper>
+  <!-- En-tête des jours -->
+  <div class="calendar-header">
+    <div class="time-column"></div>
+    <div class="day-header" *ngFor="let day of days">
+      {{ day | date : "EEEE dd/MM" }}
+    </div>
+  </div>
+
+  <!-- Corps du calendrier -->
+  <div class="calendar-body">
+    <!-- Colonne des heures -->
+    <div class="time-column">
+      <div class="hour-label" *ngFor="let hour of hours">{{ hour }}h</div>
+    </div>
+
+    <!-- Grille des jours -->
+    <div class="calendar-grid">
+      <div class="calendar-day" *ngFor="let day of days">
+        <!-- Lignes horaires -->
+        <div class="hour-line" *ngFor="let hour of hours"></div>
+
+        <!-- Blocs d'événements -->
+        <ng-container *ngFor="let group of getGroupedEventsForDay(day)">
+          <app-event-block [events]="group" (click)="onEventClick(group)">
+          </app-event-block>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

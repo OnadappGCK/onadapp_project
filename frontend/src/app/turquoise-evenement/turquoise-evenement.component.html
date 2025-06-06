@@ -1,0 +1,13 @@
+<div class="page-top"></div>
+
+<div class="evenement-container">
+  <div class="calendar-wrapper">
+    <app-calendar (openDetails)="onOpenDetails($event)"></app-calendar>
+  </div>
+
+  <app-event-detail-panel
+    *ngIf="selectedEvents.length > 0"
+    [events]="selectedEvents"
+    (closePanel)="closeDetails()"
+  ></app-event-detail-panel>
+</div>

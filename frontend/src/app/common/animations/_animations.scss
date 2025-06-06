@@ -1,0 +1,51 @@
+.animate {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TYPE WRITER */
+.typewriter {
+  overflow: hidden; /* Ensure the content is hidden until revealed */
+  border-right: 0.15em solid black; /* Cursor */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.typewriter-text {
+  display: inline-block;
+  font-size: 24px;
+  font-family: monospace; /* Optional: use a monospace font for better effect */
+  width: 24ch; /* Define the width to match the text length */
+  visibility: hidden; /* Initially hide the text */
+}
+
+.visible .typewriter-text {
+  visibility: visible;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24ch; /* Adjust this to match the text length */
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* ________________________________________________________*/

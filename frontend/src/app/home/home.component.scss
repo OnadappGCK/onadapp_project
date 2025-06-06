@@ -1,0 +1,94 @@
+@import "/src/scss/palette";
+@import "/src/app/common/animations/animations";
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.page-top {
+  width: 100%;
+  height: 115px;
+}
+
+.page-cards {
+  width: 100%;
+  padding: 50px 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-card-button {
+  width: 200px;
+  height: 260px;
+  background-color: $dark-blue-light;
+  display: grid;
+  grid-template-rows: 25% 75%;
+  padding: 5px;
+  margin: 10px;
+}
+
+.button-selectable {
+  background-color: $dark-blue;
+  border: 2px solid $dark-blue-light;
+  cursor: pointer;
+}
+
+.button-selectable:hover {
+  background-color: $dark-blue-light;
+}
+
+.page-bottom {
+  width: 100%;
+  height: 10%;
+}
+
+.page-card-title {
+  color: $white-blue-light;
+  width: 50%;
+  margin: auto;
+}
+
+img {
+  width: 80%;
+}
+
+.page-article {
+}
+
+.page-article-body {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+  //border: 1px 0 0 0 solid $white;
+
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: $white;
+}
+
+.page-article-body-side {
+  position: relative;
+  display: inline-block; /* ou block selon votre mise en page */
+}
+
+.page-article-body-side img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Pour couvrir la totalité du conteneur sans déformation */
+  object-position: center; /* Pour centrer l'image dans le conteneur */
+}
+
+.filtre-degrade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, $transparent, $dark-blue);
+}

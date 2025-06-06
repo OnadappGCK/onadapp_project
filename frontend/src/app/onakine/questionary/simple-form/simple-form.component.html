@@ -1,0 +1,17 @@
+<div class="question-container">
+  <div class="question-label">
+    <h2>{{ question.label }}</h2>
+  </div>
+
+  <div class="question-buttons">
+    <div
+      class="question-button"
+      [ngClass]="{ 'question-selected': selectedAnswer == answer }"
+      (mouseup)="selectAnswer(answer)"
+      (touchend)="selectAnswer(answer)"
+      *ngFor="let answer of question.answers"
+    >
+      {{ answer.label }}
+    </div>
+  </div>
+</div>

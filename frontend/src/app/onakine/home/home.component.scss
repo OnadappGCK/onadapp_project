@@ -1,0 +1,12 @@
+@import "/src/scss/palette";
+
+.button-test {
+  height: 100px;
+  background-color: $dark-blue-light;
+  border: 2px solid $white-blue-light;
+  color: $white-blue-light;
+}
+
+.button-test:hover {
+  color: $grey-blue-light;
+}

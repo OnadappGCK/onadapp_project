@@ -1,0 +1,59 @@
+@import "/src/scss/palette";
+
+.register-container {
+  background-color: $dark-blue-light;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.connexion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-form {
+  margin: 10px;
+}
+
+.button-form {
+  height: 40px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: $white-blue-light;
+  border-radius: 10%;
+  background-color: $dark-blue;
+  color: $white-blue-light;
+  min-width: 80px;
+  cursor: pointer;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.valid {
+  color: $green-valid;
+}
+.invalid {
+  color: $red-alert;
+}
+
+.message-pwd {
+  margin: 5px 0px;
+}

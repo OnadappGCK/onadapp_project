@@ -1,0 +1,74 @@
+<div class="page-top"></div>
+<div class="page-content">
+  <div class="register-container">
+    <form class="form-container" [formGroup]="form" (ngSubmit)="submit()">
+      <h2>Inscription</h2>
+
+      <input
+        formControlName="email"
+        class="input-form"
+        type="email"
+        placeholder="Email"
+      />
+      <input
+        formControlName="pseudo"
+        class="input-form"
+        type="text"
+        placeholder="Pseudo"
+      />
+      <input
+        formControlName="password"
+        class="input-form"
+        type="password"
+        placeholder="Mot de passe"
+      />
+      <input
+        formControlName="confirmPassword"
+        class="input-form"
+        type="password"
+        placeholder="Confirmer le mot de passe"
+      />
+
+      <re-captcha
+        [siteKey]="environment.recaptchaSiteKey"
+        *ngIf="environment.useRecaptcha"
+        (resolved)="onCaptchaResolved($event)"
+      >
+      </re-captcha>
+      <button type="submit" class="button-form">S’inscrire</button>
+
+      <div
+        *ngIf="
+          form.controls['password'].dirty || form.controls['password'].touched
+        "
+      >
+        <div
+          class="message-pwd"
+          [class.valid]="hasUpperCase()"
+          [class.invalid]="!hasUpperCase()"
+        >
+          Majuscule
+        </div>
+        <div
+          class="message-pwd"
+          [class.valid]="hasDigit()"
+          [class.invalid]="!hasDigit()"
+        >
+          Chiffre
+        </div>
+        <div
+          class="message-pwd"
+          [class.valid]="hasLength()"
+          [class.invalid]="!hasLength()"
+        >
+          8 caractères minimum
+        </div>
+      </div>
+    </form>
+
+    <p class="connexion-container">
+      Déjà inscrit ?
+      <a class="margin-5" routerLink="/auth/login">Connectez-vous</a>
+    </p>
+  </div>
+</div>

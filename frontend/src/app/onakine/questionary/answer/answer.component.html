@@ -1,0 +1,21 @@
+<div class="result-container">
+  <div class="result-informations">
+    <div class="result-information-title">
+      {{ result.title }}
+    </div>
+    <div class="result-information-label">
+      {{ result.label }}
+    </div>
+    <div class="result-information-keyletter">
+      {{ result.keyLetter }}
+    </div>
+    <div class="result-information-coeff">
+      {{ result.coeff }}
+    </div>
+  </div>
+
+  <div class="reload-button" (click)="reloadQuestionnary()">
+    <fa-icon [icon]="faArrowRotateBack"></fa-icon>
+    <h3>Relancer un questionnaire</h3>
+  </div>
+</div>
